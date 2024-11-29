@@ -2,31 +2,31 @@
 
 ## Project Overview
 
--   Utilized : TypeScript, Next.js, React, Supabase, tailwindCSS, Storybook,
+- Utilized : TypeScript, Next.js, React, Supabase, tailwindCSS, Storybook,
 
 ---
 
 ## Reference Site
 
--   [Design System](https://primer.style/components)
--   [tailwindcss](https://tailwindcss.com/docs)
--   [storybook](https://storybook.js.org/)
--   [Google material Symbol](https://fonts.google.com/iconss)
--   [Day.js](https://day.js.org/docs/en/installation/installation)
--   [Scroll-lock](https://www.npmjs.com/package/scroll-lock)
--   [Faker.js](https://fakerjs.dev/guide/)
--   [Intersection Observer Docs](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API)
--   [React Intersection Observer](https://www.npmjs.com/package/react-intersection-observer)
--   [React Responsive Carousel](https://react-responsive-carousel.js.org/)
--   [Lodash](https://lodash.com/docs/#throttle)
+- [Design System](https://primer.style/components)
+- [tailwindcss](https://tailwindcss.com/docs)
+- [storybook](https://storybook.js.org/)
+- [Google material Symbol](https://fonts.google.com/iconss)
+- [Day.js](https://day.js.org/docs/en/installation/installation)
+- [Scroll-lock](https://www.npmjs.com/package/scroll-lock)
+- [Faker.js](https://fakerjs.dev/guide/)
+- [Intersection Observer Docs](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API)
+- [React Intersection Observer](https://www.npmjs.com/package/react-intersection-observer)
+- [React Responsive Carousel](https://react-responsive-carousel.js.org/)
+- [Lodash](https://lodash.com/docs/#throttle)
 
 ---
 
 ## Milestones
 
--   M1 : App Basic Functionality Development
--   M2 : Advanced Features and Testing
--   M3 : Performance Improvement
+- M1 : App Basic Functionality Development
+- M2 : Advanced Features and Testing
+- M3 : Performance Improvement
 
 ---
 
@@ -36,8 +36,8 @@
 
 **Task 1. Common Layout**
 
--   **Issues** : [task-1-layout](https://github.com/ld5ehom/blog-web/tree/task-1-layout)
--   **Details** :
+- **Issues** : [task-1-layout](https://github.com/ld5ehom/blog-web/tree/task-1-layout)
+- **Details** :
 
 **Task 2. Post Writing and Detail Pages**
 
@@ -73,81 +73,111 @@ yarn install
 yarn dev
 ```
 
--   **storybook start**:
+- **storybook start**:
 
 ```
-npm run storybook
+yarn storybook
 ```
 
 ---
 
 ## Setup
 
--   **Homebrew (macOS terminal)**:
+- **Homebrew (macOS terminal)**:
 
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
--   **git (homebrew)**:
+- **git (homebrew)**:
 
 ```
 brew install git
 ```
 
--   **node.js (homebrew)**:
+- **node.js (homebrew)**:
 
 ```
 brew install node
 ```
 
--   **ESLint and Prettier**:
+- **ESLint and Prettier**:
 
 ```
-npm install eslint prettier -D
+yarn add --dev eslint-plugin-tailwindcss
+yarn add prettier -D
 ```
 
--   **react hook form**:
+- **TailwindCSS Class Variance Authority**:
 
 ```
-npm install react-hook-form --legacy-peer-deps
+yarn add class-variance-authority
 ```
 
--   **storybook**:
+- **TailwindCSS merge**:
+
+```
+yarn add tailwind-merge
+```
+
+- **Supabase SDK**:
+
+```
+yarn add @supabase/supabase-js @supabase/ssr
+```
+
+- **Supabase CLI**:
+
+```
+yarn add --dev supabase
+yarn genTypes
+```
+
+```
+supabase gen types typescript --project-id ndesojthjlzsttpdzsgl > src/types/supabase.ts
+```
+
+- **react hook form**:
+
+```
+yarn add react-hook-form --legacy-peer-deps
+```
+
+- **storybook**:
 
 ```
 npx storybook@latest init
-npm install storybook@latest
+yarn add storybook@latest
 ```
 
--   **classnames**:
+- **classnames**:
 
 ```
-npm install classnames
+yarn add classnames
 ```
 
--   **day.js**:
+- **day.js**:
 
 ```
-npm install dayjs --save
+yarn add dayjs
 ```
 
--   **Scroll-lock**:
+- **Scroll-lock**:
 
 ```
-npm install scroll-lock
-npm install --save-dev @types/scroll-lock
+yarn add scroll-lock
+yarn add @types/scroll-lock -D
 ```
 
--   **Mock Data Setup**:
+- **Mock Data Setup**:
 
 ```
-npm install @faker-js/faker --save-dev
+yarn add @faker-js/faker -D
 ```
 
--   **Infinite Scroll and Carousel**:
+- **Infinite Scroll and Carousel**:
 
 ```
-npm install react-intersection-observer
-npm install react-responsive-carousel --save
+yarn add react-intersection-observer
+yarn add react-responsive-carousel
 ```
