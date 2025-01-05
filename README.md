@@ -8,6 +8,8 @@
 
 ## Reference Site
 
+## Reference Site
+
 - [Design System](https://primer.style/components)
 - [tailwindcss](https://tailwindcss.com/docs)
 - [storybook](https://storybook.js.org/)
@@ -19,6 +21,9 @@
 - [React Intersection Observer](https://www.npmjs.com/package/react-intersection-observer)
 - [React Responsive Carousel](https://react-responsive-carousel.js.org/)
 - [Lodash](https://lodash.com/docs/#throttle)
+- [Toast UI](https://nhn.github.io/tui.editor/latest/)
+- [React Virtuoso](https://virtuoso.dev/)
+- [Supabase Auth](https://supabase.com/docs/guides/auth/managing-user-data)
 
 ---
 
@@ -26,7 +31,7 @@
 
 - M1 : App Basic Functionality Development
 - M2 : Advanced Features and Testing
-- M3 : Performance Improvement
+- M3 : Bug Fixes and Updates
 
 ---
 
@@ -38,28 +43,23 @@
 
 - **Issues** : [task-1-layout](https://github.com/ld5ehom/blog-web/tree/task-1-layout)
 - **Details** :
+    - **Built the blog page layout by implementing Header and Footer and applying Sidebar and Dynamic Routes with the React Icons library.**
 
 **Task 2. Post Writing and Detail Pages**
 
 **Task 3. Post List Page**
 
-**Task 4. Basic Blog Features**
+**Task 4. Blog Features**
 
 ### Milestone 2: Advanced Features and Testing
 
 **Task 5. Chatbot Page**
 
-**Task 6. OpenAI API Integration**
+**Task 6. RAG (Retrieval-Augmented Generation)**
 
-**Task 7. Chatbot Enhancements**
+## **Task 7. Performance Improvement**
 
-**Task 8. RAG (Retrieval-Augmented Generation)**
-
----
-
-### Milestone 3: Performance Improvement
-
-**Task 9. Performance Improvement**
+### Milestone 3: Bug Fixes and Updates
 
 ---
 
@@ -77,107 +77,4 @@ yarn dev
 
 ```
 yarn storybook
-```
-
----
-
-## Setup
-
-- **Homebrew (macOS terminal)**:
-
-```
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
-
-- **git (homebrew)**:
-
-```
-brew install git
-```
-
-- **node.js (homebrew)**:
-
-```
-brew install node
-```
-
-- **ESLint and Prettier**:
-
-```
-yarn add --dev eslint-plugin-tailwindcss
-yarn add prettier -D
-```
-
-- **TailwindCSS Class Variance Authority**:
-
-```
-yarn add class-variance-authority
-```
-
-- **TailwindCSS merge**:
-
-```
-yarn add tailwind-merge
-```
-
-- **Supabase SDK**:
-
-```
-yarn add @supabase/supabase-js @supabase/ssr
-```
-
-- **Supabase CLI**:
-
-```
-yarn add --dev supabase
-yarn genTypes
-```
-
-```
-supabase gen types typescript --project-id ndesojthjlzsttpdzsgl > src/types/supabase.ts
-```
-
-- **react hook form**:
-
-```
-yarn add react-hook-form --legacy-peer-deps
-```
-
-- **storybook**:
-
-```
-npx storybook@latest init
-yarn add storybook@latest
-```
-
-- **classnames**:
-
-```
-yarn add classnames
-```
-
-- **day.js**:
-
-```
-yarn add dayjs
-```
-
-- **Scroll-lock**:
-
-```
-yarn add scroll-lock
-yarn add @types/scroll-lock -D
-```
-
-- **Mock Data Setup**:
-
-```
-yarn add @faker-js/faker -D
-```
-
-- **Infinite Scroll and Carousel**:
-
-```
-yarn add react-intersection-observer
-yarn add react-responsive-carousel
 ```
