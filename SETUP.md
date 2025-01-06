@@ -100,3 +100,22 @@ yarn add react-responsive-carousel
 ```
 yarn add react-icons
 ```
+
+- **date fns**
+
+```
+yarn add date-fns
+```
+
+- **React Markdown Editor**
+
+```
+yarn add @uiw/react-md-editor @uiw/react-markdown-preview next-remove-imports
+```
+
+- **formidable**
+
+```
+yarn add formidable
+yarn add @types/formidable --dev
+```
