@@ -8,8 +8,6 @@
 
 ## Reference Site
 
-## Reference Site
-
 - [Design System](https://primer.style/components)
 - [tailwindcss](https://tailwindcss.com/docs)
 - [storybook](https://storybook.js.org/)
@@ -43,9 +41,16 @@
 
 - **Issues** : [task-1-layout](https://github.com/ld5ehom/blog-web/tree/task-1-layout)
 - **Details** :
-    - **Built the blog page layout by implementing Header and Footer and applying Sidebar and Dynamic Routes with the React Icons library.**
+    - **Built the blog page layout by implementing Header and Footer and applying Sidebar and Dynamic Routes with the React Icons library.** [55ce929](https://github.com/ld5ehom/blog-web/commit/55ce929d0476717797d3be0f08b09cd257589d89)
 
 **Task 2. Post Writing and Detail Pages**
+
+- **Issues** : [task-2-detail](https://github.com/ld5ehom/blog-web/tree/task-2-detail)
+- **Details** :
+    - **Post Creation & Detail Page with Tagging and Markdown Rendering**
+        - Implemented the UI for both the post creation and detailed post pages.
+        - Integrated React Select for the multi-select tag functionality, enabling users to select tags for their posts.
+        - Implemented a Markdown editor and rendered the content using Markdown syntax for a rich text experience.
 
 **Task 3. Post List Page**
 
@@ -57,7 +62,7 @@
 
 **Task 6. RAG (Retrieval-Augmented Generation)**
 
-## **Task 7. Performance Improvement**
+**Task 7. Performance Improvement**
 
 ### Milestone 3: Bug Fixes and Updates
 
