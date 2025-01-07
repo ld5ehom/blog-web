@@ -47,12 +47,22 @@
 
 - **Issues** : [task-2-detail](https://github.com/ld5ehom/blog-web/tree/task-2-detail)
 - **Details** :
-    - **Post Creation & Detail Page with Tagging and Markdown Rendering**
+    - **Post Creation & Detail Page with Tagging and Markdown Rendering** [5e9553b](https://github.com/ld5ehom/blog-web/commit/5e9553bc53460793012ca0d30614b0a7f9ad1e72)
         - Implemented the UI for both the post creation and detailed post pages.
         - Integrated React Select for the multi-select tag functionality, enabling users to select tags for their posts.
         - Implemented a Markdown editor and rendered the content using Markdown syntax for a rich text experience.
 
 **Task 3. Post List Page**
+
+- **Issues** : [task-3-list](https://github.com/ld5ehom/blog-web/tree/task-3-list)
+- **Details** :
+    - Implemented post list and PostCard using React Query and added infinite scroll functionality with react-intersection-observer.
+        ```
+        yarn add @tanstack/react-query
+        ```
+        ```
+        yarn add react-intersection-observer
+        ```
 
 **Task 4. Blog Features**
 
@@ -61,8 +71,6 @@
 **Task 5. Chatbot Page**
 
 **Task 6. RAG (Retrieval-Augmented Generation)**
-
-**Task 7. Performance Improvement**
 
 ### Milestone 3: Bug Fixes and Updates
 

@@ -15,12 +15,12 @@ const Sidebar: FC<SidebarProps> = ({ close, isOpen }) => {
     return (
         <div
             className={cn(
-                "absolute min-h-screen flex-col gap-6 border-r bg-white p-10 pr-6 text-base lg:relative",
+                "absolute z-10 min-h-screen flex-col gap-6 border-r bg-white p-10 pr-6 text-base lg:relative",
                 isOpen ? "flex" : "hidden"
             )}
         >
             <div className="flex justify-end lg:hidden">
-                <IconButton icon={AiOutlineClose} onAbort={close} />
+                <IconButton icon={AiOutlineClose} onClick={close} />
             </div>
             <Link
                 href="/"
