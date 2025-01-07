@@ -1,24 +1,35 @@
 import Input from "@/components/Input";
 import { MarkdownEditor } from "@/components/Markdown";
-import { createClient } from "@/utils/supabase/server";
-import { GetServerSideProps } from "next";
+import { createClient } from "@/utils/supabase/client";
+import { useQuery } from "@tanstack/react-query";
 import { useRouter } from "next/router";
 import { FormEvent, useRef, useState } from "react";
 import ReactSelect from "react-select/creatable";
 
-type WriteProps = {
-    existingTags: string[];
-    existingCategories: string[];
-};
+const supabase = createClient();
 
-export default function Write({
-    existingTags,
-    existingCategories,
-}: WriteProps) {
+export default function Write() {
     const router = useRouter();
 
     const titleRef = useRef<HTMLInputElement>(null);
     const fileRef = useRef<HTMLInputElement>(null);
+
+    const { data: existingCategories } = useQuery({
+        queryKey: ["categories"],
+        queryFn: async () => {
+            const { data } = await supabase.from("Post").select("category");
+            return Array.from(new Set(data?.map((d) => d.category)));
+        },
+    });
+    const { data: existingTags } = useQuery({
+        queryKey: ["tags"],
+        queryFn: async () => {
+            const { data } = await supabase.from("Post").select("tags");
+            return Array.from(
+                new Set(data?.flatMap((d) => JSON.parse(d.tags)))
+            );
+        },
+    });
 
     const [category, setCategory] = useState("");
     const [tags, setTags] = useState("");
@@ -72,18 +83,22 @@ export default function Write({
 
                     {/* Dropdown for categories (카테고리 선택 드롭다운) */}
                     <ReactSelect
-                        options={existingCategories.map((category) => ({
+                        options={(existingCategories ?? []).map((category) => ({
                             label: category,
                             value: category,
                         }))}
                         placeholder="Category"
-                        onChange={(e) => e && setCategory(e.value)}
+                        onChange={(e) => {
+                            if (e?.value) {
+                                setCategory(e.value); // e.value가 string일 때만 상태를 업데이트
+                            }
+                        }}
                         isMulti={false}
                     />
 
                     {/* Multi-select for tags (태그 다중 선택 드롭다운) */}
                     <ReactSelect
-                        options={existingTags.map((tag) => ({
+                        options={(existingTags ?? []).map((tag) => ({
                             label: tag,
                             value: tag,
                         }))}
@@ -113,36 +128,3 @@ export default function Write({
         </div>
     );
 }
-
-export const getServerSideProps: GetServerSideProps<WriteProps> = async ({
-    req,
-}) => {
-    const supabase = createClient(req.cookies);
-
-    // Fetch existing categories and tags from the database
-    const { data } = await supabase.from("Post").select("category, tags");
-
-    // Filter out null values and ensure that categories are strings
-    const existingCategories = Array.from(
-        new Set(
-            data?.map((d) => d.category).filter((category) => category !== null)
-        )
-    );
-
-    // Filter out null values and parse tags to ensure it's a string[]
-    const existingTags = Array.from(
-        new Set(
-            data
-                ?.flatMap((d) => (d.tags ? JSON.parse(d.tags) : []))
-                .filter((tag) => typeof tag === "string")
-        )
-    );
-
-    return {
-        props: {
-            // Ensure existingCategories is of type string[]
-            existingCategories: existingCategories as string[],
-            existingTags: existingTags, // existingTags is already of type string[]
-        },
-    };
-};
