@@ -25,6 +25,24 @@
 
 ---
 
+## Start
+
+```
+yarn install
+```
+
+```
+yarn dev
+```
+
+- **storybook start**:
+
+```
+yarn storybook
+```
+
+---
+
 ## Milestones
 
 - M1 : App Basic Functionality Development
@@ -56,7 +74,7 @@
 
 - **Issues** : [task-3-list](https://github.com/ld5ehom/blog-web/tree/task-3-list)
 - **Details** :
-    - Implemented post list and PostCard using React Query and added infinite scroll functionality with react-intersection-observer.
+    - **Implemented post list and PostCard using React Query and added infinite scroll functionality with react-intersection-observer.** [605e1db](https://github.com/ld5ehom/blog-web/commit/605e1db3e6b6c0f97e8b219b77f54bea7eaf0f34)
         ```
         yarn add @tanstack/react-query
         ```
@@ -65,6 +83,10 @@
         ```
 
 **Task 4. Blog Features**
+
+- **Issues** : [task-4-features](https://github.com/ld5ehom/blog-web/tree/task-4-features)
+- **Details** :
+    - **Implemented Blog Functionality with Authentication and Sidebar Features**
 
 ### Milestone 2: Advanced Features and Testing
 
@@ -75,19 +97,3 @@
 ### Milestone 3: Bug Fixes and Updates
 
 ---
-
-## Start
-
-```
-yarn install
-```
-
-```
-yarn dev
-```
-
-- **storybook start**:
-
-```
-yarn storybook
-```
