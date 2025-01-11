@@ -29,6 +29,10 @@ const config: Config = {
                 darkerGold: "#FFC72C", // Darker gold
             },
         },
+        container: {
+            center: true,
+            padding: "16px",
+        },
     },
     plugins: [],
 };

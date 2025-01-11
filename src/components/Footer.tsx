@@ -19,14 +19,14 @@ const Footer: FC = () => {
                 <div className="pr-1 text-sm lg:pr-2 lg:text-base">ADMIN</div>
                 <IconButton
                     icon={AiOutlineSetting}
-                    href="/admin"
                     component={Link}
+                    href="/admin"
                     className="text-gray-500 hover:text-gray-600"
                 />
                 <IconButton
                     icon={BsPencilSquare}
-                    href="/write"
                     component={Link}
+                    href="/write"
                     className="text-gray-500 hover:text-gray-600"
                 />
             </div>
