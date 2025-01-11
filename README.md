@@ -46,8 +46,7 @@ yarn storybook
 ## Milestones
 
 - M1 : App Basic Functionality Development
-- M2 : Advanced Features and Testing
-- M3 : Bug Fixes and Updates
+- M2 : Bug Fixes and Updates
 
 ---
 
@@ -86,14 +85,9 @@ yarn storybook
 
 - **Issues** : [task-4-features](https://github.com/ld5ehom/blog-web/tree/task-4-features)
 - **Details** :
-    - **Implemented Blog Functionality with Authentication and Sidebar Features**
-
-### Milestone 2: Advanced Features and Testing
-
-**Task 5. Chatbot Page**
-
-**Task 6. RAG (Retrieval-Augmented Generation)**
-
-### Milestone 3: Bug Fixes and Updates
+    - **Implemented Blog Functionality with Authentication and Sidebar Features** [a9bd129](https://github.com/ld5ehom/blog-web/commit/a9bd129cc40d2304d76bc8ee4f91682cc14ea04d)
+    - **Implemented Button Component and utils/hooks**
 
 ---
+
+### Milestone 2: Bug Fixes and Updates
